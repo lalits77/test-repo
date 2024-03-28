@@ -62,7 +62,7 @@ module "ec2_app" {
 }
  
 module "ec2_worker" {
-   source = "git::https://lalits77/terraform-module-1.git"
+   source = "git::git@github.com:lalits77/terraform-module-1.git"
  
    infra_env = var.infra_env
    infra_role = "worker"
