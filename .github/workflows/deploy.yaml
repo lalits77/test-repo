@@ -41,7 +41,6 @@ jobs:
   
 
     - name: Terraform Init      
-      working-directory: ${{ env.TERRAFORM_DIRECTORY }}
       shell: bash
       run: |
         terraform init 
