@@ -18,7 +18,7 @@ jobs:
     steps:
     
     - name: Checkout PR
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
@@ -34,7 +34,7 @@ jobs:
         private_key: ${{ secrets.TERRAFORM_PRIVATE_KEY }}
 
     - name: Extend Git credentials
-      uses: de-vri-es/setup-git-credentials@v2.0.10
+      uses: de-vri-es/setup-git-credentials@v2.1.2
       with:
         credentials: https://user:${{ steps.get_app_token.outputs.token }}@github.com
 
