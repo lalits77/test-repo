@@ -52,7 +52,7 @@ variable instance_size {
  
  
 module "ec2_app" {
-   source = "./modules/ec2"
+   source = "git::git@github.com:lalits77/terraform-module-1.git"
  
    infra_env = var.infra_env
    infra_role = "app"
