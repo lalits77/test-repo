@@ -70,3 +70,13 @@ module "ec2_worker" {
    instance_ami = data.aws_ami.app.id
    instance_root_device_size = 50
 }
+
+module "ec2_master" {
+   source = "git::git@github.com:lalits77/terraform-module-2.git"
+ 
+   infra_env = var.infra_env
+   infra_role = "worker"
+   instance_size = "t3.large"
+   instance_ami = data.aws_ami.app.id
+   instance_root_device_size = 50
+}
